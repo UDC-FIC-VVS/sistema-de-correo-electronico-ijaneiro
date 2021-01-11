@@ -1,11 +1,15 @@
 package gal.udc.fic.vvs.email.correo;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Vector;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import gal.udc.fic.vvs.email.archivo.Texto;
 
@@ -17,7 +21,7 @@ public class MensajeTest {
 	
 	private Texto texto = new Texto(NOMBRE_TEXTO, CONTENIDO_TEXTO);
 	private Mensaje mensaje;
-	
+	private Mensaje otroMensaje = new Mensaje(texto);
 	
 	@Before
 	public void init() {
@@ -92,6 +96,56 @@ public class MensajeTest {
 		Vector<Mensaje> vector = (Vector<Mensaje>) mensaje.buscar(BUSQUEDA_ERRONEA);
 		
 		assertTrue(vector.isEmpty());
+	}
+	
+	/*Test metodos heredados*/
+	
+	@Test(expected = OperacionInvalida.class)
+	public void explorarTest() throws OperacionInvalida{
+		mensaje.explorar();
+    }
+	
+	@Test(expected = OperacionInvalida.class)
+    public void añadirTest() throws OperacionInvalida {
+		mensaje.añadir(mensaje);
+    }
+	
+	@Test(expected = OperacionInvalida.class)
+    public void eliminarTest() throws OperacionInvalida {
+		mensaje.eliminar(mensaje);
+    }
+
+	@Test(expected = OperacionInvalida.class)
+    public void obtenerHijoTest() throws OperacionInvalida {
+		mensaje.obtenerHijo(0);
+    }
+	
+	@Test
+	public void obtenerPadreTest() {
+        assertNull(mensaje.obtenerPadre());
+    }
+	
+	@Test
+	public void establecerPadreTest() {
+    	
+       mensaje.establecerPadre(otroMensaje);
+       assertEquals(otroMensaje, mensaje.obtenerPadre());
+    }
+	
+	@Test
+    public void obtenerRutaTest_SinPadre() {
+		
+		assertEquals(mensaje.obtenerPreVisualizacion(), mensaje.obtenerRuta());
+	}
+	
+	@Test
+    public void obtenerRutaTest_ConPadre() {
+		mensaje.establecerPadre(otroMensaje);
+		
+		String visualizacion = otroMensaje.obtenerPreVisualizacion() + " > " + 
+				mensaje.obtenerPreVisualizacion();
+		
+		assertEquals(visualizacion, mensaje.obtenerRuta());
 	}
 
 }
