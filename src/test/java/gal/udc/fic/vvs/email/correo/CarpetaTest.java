@@ -2,7 +2,6 @@ package gal.udc.fic.vvs.email.correo;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Collection;
@@ -106,12 +105,6 @@ public class CarpetaTest {
 		
 		int tamaño = mensaje.obtenerTamaño() + otroMensaje.obtenerTamaño();
 		assertEquals(tamaño, carpeta.obtenerTamaño());
-	}
-	
-	@Test
-	public void obtenerPreVisualizacionTest() throws OperacionInvalida {
-		
-		assertEquals(NOMBRE_CARPETA, carpeta.obtenerPreVisualizacion());
 	}
 	
 	@Test
