@@ -1,7 +1,6 @@
 package gal.udc.fic.vvs.email.correo;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -27,14 +26,5 @@ public class AdjuntoTest {
 		int tamaño = mensaje.obtenerTamaño() + archivo.obtenerTamaño();
 
 		assertEquals(tamaño, adjunto.obtenerTamaño());
-	}
-	
-	@Test
-	public void obtenerVisualizacionTest() {
-		
-		String visualizacion = mensaje.obtenerVisualizacion() + "\n\nAdxunto: " + 
-				archivo.obtenerPreVisualizacion();
-		
-		assertEquals(visualizacion, adjunto.obtenerVisualizacion());
 	}
 }
