@@ -33,12 +33,6 @@ public class TextoTest {
 	}
 	
 	@Test
-	public void obtenerTamañoTest() {
-
-		assertEquals(TAMAÑO_ARCHIVO, texto.obtenerTamaño());
-	}
-	
-	@Test
 	public void obtenerMimeTypeTest() {
 
 		assertEquals(MIME_TYPE, texto.obtenerMimeType());
