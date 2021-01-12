@@ -21,14 +21,6 @@ public class ArchivadorSimpleTest {
 	public void init() {
 		archivadorSimple = new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR);
 	}
-
-	@Test
-	public void obtenerNombreTest() {
-		
-		String nombreObtenido = archivadorSimple.obtenerNombre();
-		
-		assertEquals(NOMBRE_ARCHIVADOR, nombreObtenido);
-	}
 	
 	@Test
 	public void almacenarCorreoTest_EspacioSuficiente() {
