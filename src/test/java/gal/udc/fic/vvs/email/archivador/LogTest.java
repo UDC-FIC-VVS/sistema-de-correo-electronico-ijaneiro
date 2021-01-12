@@ -32,14 +32,6 @@ public class LogTest {
 	}
 	
 	@Test
-	public void almacenarCorreoTest_EspacioSuficiente() {
-		
-		boolean salida = log.almacenarCorreo(CORREO_TAMAÑO_1);
-		
-		assertTrue(salida);
-	}
-	
-	@Test
 	public void almacenarCorreoTest_EspacioInsuficiente() {
 		
 		boolean salida = log.almacenarCorreo(CORREO_TAMAÑO_6);
