@@ -27,12 +27,6 @@ public class ImagenTest {
 	}
 	
 	@Test
-	public void obtenerContenidoTest() {
-
-		assertEquals(CONTENIDO_ARCHIVO, imagen.obtenerContenido());
-	}
-	
-	@Test
 	public void obtenerTamañoTest() {
 
 		assertEquals(TAMAÑO_ARCHIVO, imagen.obtenerTamaño());
