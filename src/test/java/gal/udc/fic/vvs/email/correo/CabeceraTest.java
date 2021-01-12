@@ -3,9 +3,7 @@ package gal.udc.fic.vvs.email.correo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
-import java.util.Collection;
 import java.util.Vector;
 
 import org.junit.Before;
@@ -38,17 +36,7 @@ public class CabeceraTest {
 		int tamaño = mensaje.obtenerTamaño() + nombre.length() + valor.length();
 
 		assertEquals(tamaño, cabecera.obtenerTamaño());
-	}
-	
-	@Test
-	public void obtenerVisualizacionTest() {
-		
-		String visualizacion = nombre  + ": " + valor + "\n" + 
-				mensaje.obtenerVisualizacion();
-		
-		assertEquals(visualizacion, cabecera.obtenerVisualizacion());
-	}
-	
+	}	
 	
 	/*Test metodos heredados*/
 	
