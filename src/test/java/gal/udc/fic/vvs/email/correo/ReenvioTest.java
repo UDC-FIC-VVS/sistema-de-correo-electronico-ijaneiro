@@ -1,7 +1,6 @@
 package gal.udc.fic.vvs.email.correo;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -26,15 +25,6 @@ public class ReenvioTest {
 		int tamaño = mensaje.obtenerTamaño() + mensajeReenviar.obtenerTamaño();
 
 		assertEquals(tamaño, reenvio.obtenerTamaño());
-	}
-	
-	@Test
-	public void obtenerVisualizacionTest() {
-		
-		String visualizacion = mensaje.obtenerVisualizacion() + "\n\n---- Correo reenviado ----\n\n" + 
-							mensajeReenviar.obtenerVisualizacion() + "\n---- Fin correo reenviado ----";
-		
-		assertEquals(visualizacion, reenvio.obtenerVisualizacion());
 	}
 
 }
