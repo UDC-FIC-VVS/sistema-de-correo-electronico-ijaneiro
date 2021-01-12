@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.2.0" sequence="0" timestamp="1610467184945" analysisTimestamp="1610487732372" release="">
+  <Project projectName="FICmail">
+    <Jar>C:\VVS\sistema-de-correo-electronico-ijaneiro\target\classes</Jar>
+    <AuxClasspathEntry>C:\Users\Ivan\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Ivan\.m2\repository\com\pholser\junit-quickcheck-core\1.0\junit-quickcheck-core-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Ivan\.m2\repository\org\javaruntype\javaruntype\1.3\javaruntype-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Ivan\.m2\repository\org\antlr\antlr-runtime\3.1.2\antlr-runtime-3.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Ivan\.m2\repository\ognl\ognl\3.1.12\ognl-3.1.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Ivan\.m2\repository\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Ivan\.m2\repository\ru\vyarus\generics-resolver\3.0.1\generics-resolver-3.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Ivan\.m2\repository\com\pholser\junit-quickcheck-generators\1.0\junit-quickcheck-generators-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Ivan\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Ivan\.m2\repository\org\slf4j\slf4j-simple\1.7.30\slf4j-simple-1.7.30.jar</AuxClasspathEntry>
+    <SrcDir>C:\VVS\sistema-de-correo-electronico-ijaneiro\src\main\java</SrcDir>
+    <WrkDir>C:\VVS\sistema-de-correo-electronico-ijaneiro\target</WrkDir>
+  </Project>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="gal.udc.fic.vvs.email.cliente.ClienteImp$ArchivadorItem">
+      <SourceLine classname="gal.udc.fic.vvs.email.cliente.ClienteImp$ArchivadorItem" start="453" end="467" sourcefile="ClienteImp.java" sourcepath="gal/udc/fic/vvs/email/cliente/ClienteImp.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="gal.udc.fic.vvs.email.cliente.ClienteImp$CorreoItem">
+      <SourceLine classname="gal.udc.fic.vvs.email.cliente.ClienteImp$CorreoItem" start="475" end="485" sourcefile="ClienteImp.java" sourcepath="gal/udc/fic/vvs/email/cliente/ClienteImp.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC" priority="2" rank="18" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="gal.udc.fic.vvs.email.cliente.ClienteImp$CorreoRenderer">
+      <SourceLine classname="gal.udc.fic.vvs.email.cliente.ClienteImp$CorreoRenderer" start="492" end="509" sourcefile="ClienteImp.java" sourcepath="gal/udc/fic/vvs/email/cliente/ClienteImp.java"/>
+    </Class>
+  </BugInstance>
+  <BugInstance type="DM_NUMBER_CTOR" priority="2" rank="18" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="gal.udc.fic.vvs.email.correo.Correo">
+      <SourceLine classname="gal.udc.fic.vvs.email.correo.Correo" start="22" end="26" sourcefile="Correo.java" sourcepath="gal/udc/fic/vvs/email/correo/Correo.java"/>
+    </Class>
+    <Method classname="gal.udc.fic.vvs.email.correo.Correo" name="&lt;clinit&gt;" signature="()V" isStatic="true">
+      <SourceLine classname="gal.udc.fic.vvs.email.correo.Correo" start="22" end="26" startBytecode="0" endBytecode="103" sourcefile="Correo.java" sourcepath="gal/udc/fic/vvs/email/correo/Correo.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="&lt;init&gt;" signature="(I)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="1073" end="1075" startBytecode="0" endBytecode="69" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="valueOf" signature="(I)Ljava/lang/Integer;" isStatic="true" role="SHOULD_CALL">
+      <SourceLine classname="java.lang.Integer" start="1048" end="1050" startBytecode="0" endBytecode="90" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="gal.udc.fic.vvs.email.correo.Correo" start="22" end="22" startBytecode="5" endBytecode="5" sourcefile="Correo.java" sourcepath="gal/udc/fic/vvs/email/correo/Correo.java"/>
+    <SourceLine classname="gal.udc.fic.vvs.email.correo.Correo" start="23" end="23" startBytecode="16" endBytecode="16" sourcefile="Correo.java" sourcepath="gal/udc/fic/vvs/email/correo/Correo.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="gal.udc.fic.vvs.email.correo.Correo" start="24" end="24" startBytecode="27" endBytecode="27" sourcefile="Correo.java" sourcepath="gal/udc/fic/vvs/email/correo/Correo.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="gal.udc.fic.vvs.email.correo.Correo" start="25" end="25" startBytecode="38" endBytecode="38" sourcefile="Correo.java" sourcepath="gal/udc/fic/vvs/email/correo/Correo.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="gal.udc.fic.vvs.email.correo.Correo" start="26" end="26" startBytecode="49" endBytecode="49" sourcefile="Correo.java" sourcepath="gal/udc/fic/vvs/email/correo/Correo.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 12 Jan 2021 16:59:44 +0100" total_classes="37" referenced_classes="408" total_bugs="4" total_size="982" num_packages="5" java_version="11.0.2" vm_version="11.0.2+9" cpu_seconds="16.39" clock_seconds="142.39" peak_mbytes="180.84" alloc_mbytes="512.00" gc_seconds="0.01" priority_2="4">
+    <PackageStats package="gal.udc.fic.vvs.email" total_bugs="0" total_types="1" total_size="40">
+      <ClassStats class="gal.udc.fic.vvs.email.App" sourceFile="App.java" interface="false" size="40" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gal.udc.fic.vvs.email.archivador" total_bugs="0" total_types="5" total_size="76">
+      <ClassStats class="gal.udc.fic.vvs.email.archivador.Archivador" sourceFile="Archivador.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.archivador.ArchivadorSimple" sourceFile="ArchivadorSimple.java" interface="false" size="28" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.archivador.DecoradorArchivador" sourceFile="DecoradorArchivador.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.archivador.Delegado" sourceFile="Delegado.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.archivador.Log" sourceFile="Log.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gal.udc.fic.vvs.email.archivo" total_bugs="0" total_types="4" total_size="35">
+      <ClassStats class="gal.udc.fic.vvs.email.archivo.Archivo" sourceFile="Archivo.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.archivo.Audio" sourceFile="Audio.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.archivo.Imagen" sourceFile="Imagen.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.archivo.Texto" sourceFile="Texto.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gal.udc.fic.vvs.email.cliente" total_bugs="3" total_types="16" total_size="566" priority_2="3">
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.Cliente" sourceFile="Cliente.java" interface="true" size="2" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp" sourceFile="ClienteImp.java" interface="false" size="367" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp$1" sourceFile="ClienteImp.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp$2" sourceFile="ClienteImp.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp$3" sourceFile="ClienteImp.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp$4" sourceFile="ClienteImp.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp$ActionArchivar" sourceFile="ClienteImp.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp$ActionBuscar" sourceFile="ClienteImp.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp$ActionCambiarMarcaDeLectura" sourceFile="ClienteImp.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp$ActionConsultarEstadoCadena" sourceFile="ClienteImp.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp$ActionEstablecerArchivadorDelegado" sourceFile="ClienteImp.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp$ActionRaizExplorador" sourceFile="ClienteImp.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp$ArchivadorItem" sourceFile="ClienteImp.java" interface="false" size="17" bugs="1" priority_2="1"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp$CorreoItem" sourceFile="ClienteImp.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.ClienteImp$CorreoRenderer" sourceFile="ClienteImp.java" interface="false" size="20" bugs="1" priority_2="1"/>
+      <ClassStats class="gal.udc.fic.vvs.email.cliente.PopupListener" sourceFile="PopupListener.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="gal.udc.fic.vvs.email.correo" total_bugs="1" total_types="11" total_size="265" priority_2="1">
+      <ClassStats class="gal.udc.fic.vvs.email.correo.Adjunto" sourceFile="Adjunto.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.correo.Cabecera" sourceFile="Cabecera.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.correo.Carpeta" sourceFile="Carpeta.java" interface="false" size="54" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.correo.CarpetaLimitada" sourceFile="CarpetaLimitada.java" interface="false" size="48" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.correo.Correo" sourceFile="Correo.java" interface="true" size="25" bugs="1" priority_2="1"/>
+      <ClassStats class="gal.udc.fic.vvs.email.correo.CorreoAbstracto" sourceFile="CorreoAbstracto.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.correo.DecoradorMensaje" sourceFile="DecoradorMensaje.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.correo.Mensaje" sourceFile="Mensaje.java" interface="false" size="32" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.correo.MensajeAbstracto" sourceFile="MensajeAbstracto.java" interface="false" size="3" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.correo.OperacionInvalida" sourceFile="OperacionInvalida.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="gal.udc.fic.vvs.email.correo.Reenvio" sourceFile="Reenvio.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.SAXBugCollectionHandler" totalMilliseconds="31" invocations="1" avgMicrosecondsPerInvocation="31265" maxMicrosecondsPerInvocation="31265" standardDeviationMicrosecondsPerInvocation="0"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
