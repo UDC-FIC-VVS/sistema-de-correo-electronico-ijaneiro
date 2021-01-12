@@ -122,12 +122,6 @@ public class CarpetaLimitadaTest {
 	}
 	
 	@Test
-	public void obtenerPreVisualizacionTest() throws OperacionInvalida {
-		
-		assertEquals(NOMBRE_CARPETA, carpetaLimitada.obtenerPreVisualizacion());
-	}
-	
-	@Test
 	public void obtenerVisualizacionTest() throws OperacionInvalida {
 		carpetaLimitada.añadir(mensaje);
 		carpetaLimitada.añadir(otroMensaje);
