@@ -19,12 +19,6 @@ public class AudioTest {
 	public void init() {
 		audio = new Audio(NOMBRE_ARCHIVO, CONTENIDO_ARCHIVO);
 	}
-
-	@Test
-	public void obtenerNombreTest() {
-
-		assertEquals(NOMBRE_ARCHIVO, audio.obtenerNombre());
-	}
 	
 	@Test
 	public void obtenerContenidoTest() {
