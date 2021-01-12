@@ -7,9 +7,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.Vector;
 
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 import gal.udc.fic.vvs.email.archivo.Texto;
 
@@ -48,12 +46,6 @@ public class MensajeTest {
 		mensaje.establecerLeido(true);
 		
 		assertEquals(0, mensaje.obtenerNoLeidos());
-	}
-	
-	@Test
-	public void obtenerTamaño() {
-		
-		assertEquals(texto.obtenerTamaño(), mensaje.obtenerTamaño());
 	}
 	
 	@Test
