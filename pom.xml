@@ -19,23 +19,27 @@
     <slf4j.version>1.7.30</slf4j.version>   
   </properties>
 
-  <dependencies>
+	<dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
+    <!-- QUICK CHECK -->
     <dependency>
 		<groupId>com.pholser</groupId>
 		<artifactId>junit-quickcheck-core</artifactId>
 		<version>1.0</version>
+		<scope>test</scope>
 	</dependency>
 	<dependency>
 		<groupId>com.pholser</groupId>
 		<artifactId>junit-quickcheck-generators</artifactId>
 		<version>1.0</version>
+		<scope>test</scope>
 	</dependency>
+	<!-- Arreglan un fallo del logger slf4j que salia por consola al usar el junit-quickcheck-->
 	<dependency>
 	    <groupId>org.slf4j</groupId>
 	    <artifactId>slf4j-api</artifactId>
@@ -46,7 +50,20 @@
 	    <artifactId>slf4j-simple</artifactId>
 	    <version>${slf4j.version}</version>
 	</dependency>
-  </dependencies>
+	<!-- ARCH UNIT -->
+	<dependency>
+		<groupId>com.tngtech.archunit</groupId>
+		<artifactId>archunit</artifactId>
+		<version>0.15.0</version>
+		<scope>test</scope>
+	</dependency>
+	<dependency>
+	    <groupId>com.tngtech.archunit</groupId>
+	    <artifactId>archunit-junit</artifactId>
+	    <version>0.8.3</version>
+	    <scope>test</scope>
+	</dependency>
+	</dependencies>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -93,6 +110,7 @@
       </plugins>
     </pluginManagement>
     <plugins>
+    	<!-- SPOT BUGS -->
 		<plugin>
 			<groupId>com.github.spotbugs</groupId>
 			<artifactId>spotbugs-maven-plugin</artifactId>
@@ -106,6 +124,7 @@
 				</dependency>
 			</dependencies>
 		</plugin>
+		<!-- CHECK STYLE -->
 		<plugin>
     		<groupId>org.apache.maven.plugins</groupId>
     		<artifactId>maven-checkstyle-plugin</artifactId>
