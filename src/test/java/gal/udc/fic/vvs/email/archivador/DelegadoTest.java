@@ -81,14 +81,6 @@ public class DelegadoTest {
 		
 		assertEquals(NOMBRE_ARCHIVADOR, delegado.obtenerNombre());
 	}
-	
-	@Test
-	public void obtenerEspacioTotalTest() {
-		
-		int espacioTotal = delegado.obtenerEspacioTotal();
-		
-		assertEquals(ESPACIO_ARCHIVADOR_DECORADO, espacioTotal);
-	}
 
 	@Test
 	public void obtenerEspacioDisponibleTest() {
