@@ -137,6 +137,30 @@
 		        </dependency>
 		    </dependencies>
     	</plugin>
+    	<!-- PITEST -->
+    	<plugin>
+		    <groupId>org.pitest</groupId>
+		    <artifactId>pitest-maven</artifactId>
+		    <version>1.6.1</version>
+		    <configuration>
+		        <targetClasses>
+		            <param>gal.udc.fic.vvs.email.archivador.*</param>
+		            <param>gal.udc.fic.vvs.email.archivo.*</param>
+		            <param>gal.udc.fic.vvs.email.correo.*</param>
+		        </targetClasses>
+		        <targetTests>
+		            <param>gal.udc.fic.vvs.email.archivador.*</param>
+		            <param>gal.udc.fic.vvs.email.archivo.*</param>
+		            <param>gal.udc.fic.vvs.email.correo.*</param>
+		        </targetTests>
+		        <avoidCallsTo>
+				    <avoidCallsTo>java.util.logging</avoidCallsTo>
+				    <avoidCallsTo>org.apache.log4j</avoidCallsTo>
+				    <avoidCallsTo>org.slf4j</avoidCallsTo>
+				    <avoidCallsTo>org.apache.commons.logging</avoidCallsTo>
+				</avoidCallsTo>
+		    </configuration>
+		</plugin>
 	</plugins>
   </build>
 </project>
