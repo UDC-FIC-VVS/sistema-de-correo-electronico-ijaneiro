@@ -2,11 +2,14 @@ package gal.udc.fic.vvs.email.archivador;
 
 import static org.junit.Assert.*;
 
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import gal.udc.fic.vvs.email.archivo.Texto;
 import gal.udc.fic.vvs.email.correo.Mensaje;
+import gal.udc.fic.vvs.email.util.JetmUtil;
 
 public class LogTest {
 	
@@ -20,8 +23,22 @@ public class LogTest {
 	private  Archivador otroArchivadorDecorado = new ArchivadorSimple(OTRO_NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR_DECORADO);
 	private  Archivador archivadorDelegado; 
 	
-	private static final Mensaje CORREO_TAMAÑO_1 = new Mensaje(new Texto("Prueba", "P"));
 	private static final Mensaje CORREO_TAMAÑO_6 = new Mensaje(new Texto("Prueba", "012345"));
+	
+	@BeforeClass
+	public static void lanzarJetm() {
+		System.out.println("<------------------------------------------------------------->");
+		System.out.println("<----------------------- JETM LOG TEST ----------------------->");
+		System.out.println("<------------------------------------------------------------->");
+		// configure measurement framework
+        JetmUtil.setup();
+	}
+	
+	@AfterClass
+	public static void cerrarJetm(){		
+		// shutdown measurement framework
+		JetmUtil.tearDown();
+	}
 	
 	@Before
 	public void init() {

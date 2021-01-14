@@ -1,12 +1,18 @@
 package gal.udc.fic.vvs.email.archivador;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import gal.udc.fic.vvs.email.archivo.Texto;
 import gal.udc.fic.vvs.email.correo.Mensaje;
+import gal.udc.fic.vvs.email.util.JetmUtil;
 
 public class ArchivadorSimpleTest {
 	
@@ -16,6 +22,21 @@ public class ArchivadorSimpleTest {
 	private ArchivadorSimple archivadorSimple;
 	private static final Mensaje CORREO_TAMAÑO_1 = new Mensaje(new Texto("Prueba", "P"));
 	private static final Mensaje CORREO_TAMAÑO_10 = new Mensaje(new Texto("Prueba", "0123456789"));
+	
+	@BeforeClass
+	public static void lanzarJetm() {
+		System.out.println("<--------------------------------------------------------------------------->");
+		System.out.println("<----------------------- JETM ARCHIVADOR SIMPLE TEST ----------------------->");
+		System.out.println("<--------------------------------------------------------------------------->");
+		// configure measurement framework
+        JetmUtil.setup();
+	}
+	
+	@AfterClass
+	public static void cerrarJetm(){		
+		// shutdown measurement framework
+		JetmUtil.tearDown();
+	}
 	
 	@Before
 	public void init() {
