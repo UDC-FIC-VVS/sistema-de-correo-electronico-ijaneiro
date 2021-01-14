@@ -35,7 +35,16 @@ public class ReenvioPBT {
 		// shutdown measurement framework
 		JetmUtil.tearDown();
 	}
-	
+
+	/**
+	 * Test PBT para comporbar el funcionamiento de la funcion obtenerVisualizacion.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: generados aleatoriamente.
+	 */
 	@Property public void obtenerVisualizacionTest(@From(StringGenerator.class) String nombre, @From(StringGenerator.class) String valor,
 			@From(StringGenerator.class) String nombreArchivo, @From(StringGenerator.class) String contenidoArchivo) {
 		

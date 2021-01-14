@@ -31,12 +31,22 @@ public class MensajePBT {
 		// shutdown measurement framework
 		JetmUtil.tearDown();
 	}
-	
+
+	/**
+	 * Test PBT para comporbar el funcionamiento de la funcion obtenerTamaño.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: generados aleatoriamente.
+	 */
 	@Property public void obtenerTamañoTest(@From(StringGenerator.class) String nombreArchivo, 
 			@From(StringGenerator.class) String contenidoArchivo) {
-
-		Mensaje mensaje= new Mensaje(new Texto(nombreArchivo, contenidoArchivo));
 		
-		assertEquals(contenidoArchivo.length(), mensaje.obtenerTamaño());
+		Texto texto = new Texto(nombreArchivo, contenidoArchivo);
+		Mensaje mensaje= new Mensaje(texto);
+		
+		assertEquals(texto.obtenerTamaño(), mensaje.obtenerTamaño());
 	}	
 }

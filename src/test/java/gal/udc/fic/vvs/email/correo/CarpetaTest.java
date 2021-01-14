@@ -51,14 +51,32 @@ public class CarpetaTest {
 	public void init() {
 		carpeta = new Carpeta(NOMBRE_CARPETA);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion explorar.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void explorarTest() throws OperacionInvalida {
 		Collection vector = carpeta.explorar();
 		
 		assertTrue(vector.isEmpty());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion añadir.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void añadirTest_SinPadre() throws OperacionInvalida {
 		carpeta.añadir(mensaje);
@@ -66,7 +84,16 @@ public class CarpetaTest {
 		
 		assertFalse(vector.isEmpty());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion añadir.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void añadirTest_ConPadre() throws OperacionInvalida {
 		otraCarpeta.añadir(mensaje);
@@ -75,7 +102,16 @@ public class CarpetaTest {
 		
 		assertFalse(vector.isEmpty());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion eliminar.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void eliminarTest_Existe() throws OperacionInvalida {
 		carpeta.añadir(mensaje);
@@ -84,7 +120,16 @@ public class CarpetaTest {
 		
 		assertTrue(vector.isEmpty());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion eliminar.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void eliminarTest_NoExiste() throws OperacionInvalida {
 		carpeta.eliminar(mensaje);
@@ -92,7 +137,16 @@ public class CarpetaTest {
 		
 		assertTrue(vector.isEmpty());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerHijo.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerHijoTest() throws OperacionInvalida {
 		carpeta.añadir(mensaje);
@@ -100,7 +154,17 @@ public class CarpetaTest {
 		
 		assertEquals(mensaje, carpeta.obtenerHijo(0));
 	}
-	
+
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion establecerLeido.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void establecerLeidoTest() throws OperacionInvalida {
 		carpeta.añadir(mensaje);
@@ -108,7 +172,17 @@ public class CarpetaTest {
 		
 		assertEquals(0, carpeta.obtenerNoLeidos());
 	}
-	
+
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerNoLeidos.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerNoLeidosTest() throws OperacionInvalida {
 		carpeta.añadir(mensaje);
@@ -116,7 +190,16 @@ public class CarpetaTest {
 		
 		assertEquals(2, carpeta.obtenerNoLeidos());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerTamaño.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerTamañoTest() throws OperacionInvalida {
 		carpeta.añadir(mensaje);
@@ -125,7 +208,17 @@ public class CarpetaTest {
 		int tamaño = mensaje.obtenerTamaño() + otroMensaje.obtenerTamaño();
 		assertEquals(tamaño, carpeta.obtenerTamaño());
 	}
-	
+
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerVisualizacion.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerVisualizacionTest() throws OperacionInvalida {
 		carpeta.añadir(mensaje);
@@ -134,7 +227,17 @@ public class CarpetaTest {
 		
 		assertEquals(expected, carpeta.obtenerVisualizacion());
 	}
-	
+
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion buscar.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void buscarTest() throws OperacionInvalida {
 		carpeta.añadir(mensaje);
@@ -148,6 +251,16 @@ public class CarpetaTest {
 		assertEquals(resultadoEsperado, resultadoBusqueda);
 	}
 	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerIcono.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerIconoTest() throws OperacionInvalida {
 		

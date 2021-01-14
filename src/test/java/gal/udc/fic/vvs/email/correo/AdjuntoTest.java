@@ -39,6 +39,16 @@ public class AdjuntoTest {
 		adjunto = new Adjunto(mensaje, archivo);
 	}
 	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerTamaño.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerTamañoTest() {
 		

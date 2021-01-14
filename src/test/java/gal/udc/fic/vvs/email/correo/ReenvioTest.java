@@ -37,7 +37,16 @@ public class ReenvioTest {
 	public void init() {
 		reenvio = new Reenvio(mensaje, mensajeReenviar);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerTamaño.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerTamañoTest() {
 		

@@ -47,7 +47,16 @@ public class CabeceraTest {
 	public void init() {
 		cabecera = new Cabecera(mensaje, nombre, valor);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerTamaño.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerTamañoTest() {
 		
@@ -57,41 +66,108 @@ public class CabeceraTest {
 	}	
 	
 	/*Test metodos heredados*/
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion establecerLeido.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void establecerLeidoTest() {
         cabecera.establecerLeido(true);
         
         assertEquals(0, cabecera.obtenerNoLeidos());
     }
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerNoLeidos.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
     public void obtenerNoLeidosTest() {
         
         assertEquals(1, cabecera.obtenerNoLeidos());
     }
-    
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerIcono.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
     public void obtenerIconoTest() {
 		
 		assertEquals(Correo.ICONO_NUEVO_MENSAJE, cabecera.obtenerIcono());
     }
-
+	
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerPreVisualizacion.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
     public void obtenerPreVisualizacionTest() {
 		
 		assertEquals(mensaje.obtenerPreVisualizacion(), cabecera.obtenerPreVisualizacion());
     }
     
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerRuta.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
     public void obtenerRutaTest() {
 		assertEquals(mensaje.obtenerPreVisualizacion(), cabecera.obtenerRuta());
     }
 
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion explorar.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
+
 	@Test(expected = OperacionInvalida.class)
     public void explorarTest() throws OperacionInvalida {
         cabecera.explorar();
     }
+
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion buscar.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 
 	@Test
 	public void buscarTest_Encuentra() {
@@ -101,6 +177,17 @@ public class CabeceraTest {
 		assertEquals(cabecera, vector.elementAt(0));
 	}
 	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion buscar.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
+
 	@Test
 	public void buscarTest_NoEncuentra() {
 		
@@ -109,28 +196,82 @@ public class CabeceraTest {
 		assertTrue(vector.isEmpty());
 	}
 
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion añadir.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
+
 	@Test(expected = OperacionInvalida.class)
     public void añadirTest() throws OperacionInvalida {
         cabecera.añadir(cabecera);
     }
+
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion eliminar.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 
 	@Test(expected = OperacionInvalida.class)
     public void eliminarTest() throws OperacionInvalida {
 		cabecera.eliminar(cabecera);
     }
 
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerHijo.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
+
 	@Test(expected = OperacionInvalida.class)
     public void obtenerHijoTest() throws OperacionInvalida {
         cabecera.obtenerHijo(0);
     }
+
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerPadre.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 
 	@Test
     public void obtenerPadreTest() {
         assertNull(cabecera.obtenerPadre());
     }
 
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion establecerPadre.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
-    public void establecerPadre() {
+    public void establecerPadreTest() {
 		
 		cabecera.establecerPadre(otroMensaje);
 		

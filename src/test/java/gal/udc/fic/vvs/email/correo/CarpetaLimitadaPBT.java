@@ -34,6 +34,15 @@ public class CarpetaLimitadaPBT {
 		JetmUtil.tearDown();
 	}
 
+	/**
+	 * Test PBT para comporbar el funcionamiento de la funcion obtenerPreVisualizacion.
+	 * <p>
+	 * --> Nivel: Prueba de Integracion.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: generados aleatoriamente.
+	 */
 	@Property public void obtenerPreVisualizacionTest(@From(StringGenerator.class) String nombre) {
 
 		Carpeta carpeta = new Carpeta(nombre);
