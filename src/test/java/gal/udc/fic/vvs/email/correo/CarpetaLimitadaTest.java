@@ -5,10 +5,13 @@ import static org.junit.Assert.*;
 import java.util.Collection;
 import java.util.Vector;
 
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import gal.udc.fic.vvs.email.archivo.Texto;
+import gal.udc.fic.vvs.email.util.JetmUtil;
 
 public class CarpetaLimitadaTest {
 
@@ -39,6 +42,21 @@ public class CarpetaLimitadaTest {
 	private CarpetaLimitada carpetaLimitada;
 	private Carpeta otraCarpeta = new Carpeta(OTRO_NOMBRE_CARPETA);
 	private CarpetaLimitada otraCarpetaLimitada = new CarpetaLimitada(otraCarpeta, LIMITE_CARPETA);
+
+	@BeforeClass
+	public static void lanzarJetm() {
+		System.out.println("<-------------------------------------------------------------------------->");
+		System.out.println("<----------------------- JETM CARPETA LIMITADA TEST ----------------------->");
+		System.out.println("<-------------------------------------------------------------------------->");
+		// configure measurement framework
+        JetmUtil.setup();
+	}
+	
+	@AfterClass
+	public static void cerrarJetm(){		
+		// shutdown measurement framework
+		JetmUtil.tearDown();
+	}
 	
 	
 	@Before

@@ -6,10 +6,13 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Vector;
 
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import gal.udc.fic.vvs.email.archivo.Texto;
+import gal.udc.fic.vvs.email.util.JetmUtil;
 
 public class MensajeTest {
 	
@@ -20,6 +23,21 @@ public class MensajeTest {
 	private Texto texto = new Texto(NOMBRE_TEXTO, CONTENIDO_TEXTO);
 	private Mensaje mensaje;
 	private Mensaje otroMensaje = new Mensaje(texto);
+
+	@BeforeClass
+	public static void lanzarJetm() {
+		System.out.println("<----------------------------------------------------------------->");
+		System.out.println("<----------------------- JETM MENSAJE TEST ----------------------->");
+		System.out.println("<----------------------------------------------------------------->");
+		// configure measurement framework
+        JetmUtil.setup();
+	}
+	
+	@AfterClass
+	public static void cerrarJetm(){		
+		// shutdown measurement framework
+		JetmUtil.tearDown();
+	}
 	
 	@Before
 	public void init() {
