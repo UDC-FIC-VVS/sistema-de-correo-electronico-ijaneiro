@@ -1,9 +1,18 @@
 package gal.udc.fic.vvs.email;
 
-import gal.udc.fic.vvs.email.archivador.*;
-import gal.udc.fic.vvs.email.archivo.*;
-import gal.udc.fic.vvs.email.cliente.*;
-import gal.udc.fic.vvs.email.correo.*;
+import etm.core.configuration.BasicEtmConfigurator;
+import etm.core.configuration.EtmManager;
+import etm.core.monitor.EtmMonitor;
+import etm.core.renderer.SimpleTextRenderer;
+import gal.udc.fic.vvs.email.archivador.ArchivadorSimple;
+import gal.udc.fic.vvs.email.archivo.Texto;
+import gal.udc.fic.vvs.email.cliente.Cliente;
+import gal.udc.fic.vvs.email.cliente.ClienteImp;
+import gal.udc.fic.vvs.email.correo.Cabecera;
+import gal.udc.fic.vvs.email.correo.Carpeta;
+import gal.udc.fic.vvs.email.correo.CarpetaLimitada;
+import gal.udc.fic.vvs.email.correo.Mensaje;
+import gal.udc.fic.vvs.email.correo.Reenvio;
 
 /**
  * Hello world!
@@ -11,8 +20,13 @@ import gal.udc.fic.vvs.email.correo.*;
  */
 public class App 
 {
+	private static EtmMonitor monitor;
+	
     public static void main( String[] args )
     {
+    	// configure measurement framework
+        setup();
+        
         System.out.println( "Hello World!" );
 
         try
@@ -59,5 +73,21 @@ public class App
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
+		// visualize results
+		monitor.render(new SimpleTextRenderer());
+		
+		// shutdown measurement framework
+		tearDown();
+    }
+    
+    private static void setup() {
+        BasicEtmConfigurator.configure();
+        monitor = EtmManager.getEtmMonitor();
+        monitor.start();
+    }
+    
+    private static void tearDown() {
+    	monitor.stop();
     }
 }
