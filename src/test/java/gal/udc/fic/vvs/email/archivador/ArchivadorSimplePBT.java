@@ -35,7 +35,16 @@ public class ArchivadorSimplePBT {
 		// shutdown measurement framework
 		JetmUtil.tearDown();
 	}
-
+	
+	/**
+	 * Test PBT para comporbar el funcionamiento de la funcion obtenerNombreTest.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: generados aleatoriamente.
+	 */
 	@Property public void obtenerNombreTest(@From(StringGenerator.class) String nombre) {
 
 		archivadorSimple = new ArchivadorSimple(nombre, ESPACIO_ARCHIVADOR);

@@ -54,6 +54,15 @@ public class DelegadoTest {
 		delegado.establecerDelegado(archivadorDelegado);
 	}
 	
+	/**
+	 * Test para comporbar el funcionamiento de la funcion almacenarCorreo.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void almacenarCorreoTest_EspacioSuficienteDecorado() {
 		
@@ -61,7 +70,16 @@ public class DelegadoTest {
 		
 		assertTrue(salida);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion almacenarCorreo.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void almacenarCorreoTest_EspacioInsuficienteDecorado() {
 		
@@ -69,7 +87,16 @@ public class DelegadoTest {
 		
 		assertTrue(salida);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion almacenarCorreo.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void almacenarCorreoTest_EspacioInsuficienteDecoradoDelegado() {
 		
@@ -77,7 +104,16 @@ public class DelegadoTest {
 		
 		assertFalse(salida);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion establecerDelegado.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void establecerDelegadoTest() {
 		
@@ -85,7 +121,16 @@ public class DelegadoTest {
 		
 		assertEquals(OTRO_NOMBRE_ARCHIVADOR, delegado.obtenerDelegado().obtenerNombre());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerDelegado.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerDelegadoTest() {
 		
@@ -93,13 +138,31 @@ public class DelegadoTest {
 		
 		assertEquals(NOMBRE_ARCHIVADOR, delegado.obtenerNombre());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerNombre.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerNombreTest() {
 		
 		assertEquals(NOMBRE_ARCHIVADOR, delegado.obtenerNombre());
 	}
 
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerEspacio.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerEspacioDisponibleTest() {
 		

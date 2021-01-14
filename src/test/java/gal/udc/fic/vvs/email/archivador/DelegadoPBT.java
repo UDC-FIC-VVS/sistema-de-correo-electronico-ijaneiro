@@ -35,7 +35,16 @@ public class DelegadoPBT {
 		// shutdown measurement framework
 		JetmUtil.tearDown();
 	}
-	
+
+	/**
+	 * Test PBT para comporbar el funcionamiento de la funcion obtenerEspacioTotal.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: generados aleatoriamente.
+	 */
 	@Property public void obtenerEspacioTotalTest(@From(IntegerGenerator.class) int espacio) {
 		
 		archivadorSimple = new ArchivadorSimple(NOMBRE_ARCHIVADOR, espacio);

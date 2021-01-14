@@ -43,6 +43,15 @@ public class ArchivadorSimpleTest {
 		archivadorSimple = new ArchivadorSimple(NOMBRE_ARCHIVADOR, ESPACIO_ARCHIVADOR);
 	}
 	
+	/**
+	 * Test para comporbar el funcionamiento de la funcion almacenarCorreo.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void almacenarCorreoTest_EspacioSuficiente() {
 		
@@ -50,7 +59,16 @@ public class ArchivadorSimpleTest {
 		
 		assertTrue(salida);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion almacenarCorreo.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void almacenarCorreoTest_EspacioInsuficiente() {
 		
@@ -58,7 +76,16 @@ public class ArchivadorSimpleTest {
 		
 		assertFalse(salida);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerEspacioTotal.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerEspacioTotalTest() {
 		
@@ -66,7 +93,16 @@ public class ArchivadorSimpleTest {
 		
 		assertEquals(ESPACIO_ARCHIVADOR, espacioTotalObtenido);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerEspacioDisponible.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerEspacioDisponibleTest() {
 		
@@ -76,7 +112,16 @@ public class ArchivadorSimpleTest {
 		
 		assertEquals(ESPACIO_ARCHIVADOR - CORREO_TAMAÑO_1.obtenerTamaño(), espacioDisponibleObtenido);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerDelegado.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerDelegadoTest() {
 		
@@ -85,6 +130,15 @@ public class ArchivadorSimpleTest {
 		assertNull(delegado);
 	}
 	
+	/**
+	 * Test para comporbar el funcionamiento de la funcion establecerDelegado.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void establecerDelegadoTest() {
 		

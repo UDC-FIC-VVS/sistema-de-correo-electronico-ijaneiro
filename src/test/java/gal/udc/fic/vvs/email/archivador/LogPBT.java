@@ -22,7 +22,6 @@ import gal.udc.fic.vvs.email.util.JetmUtil;
 public class LogPBT {
 	
 	private static final String NOMBRE_ARCHIVADOR = "nombreArchivador";
-	private static final int ESPACIO_ARCHIVADOR = 9;
 	
 	private Mensaje mensaje = new Mensaje(new Texto("1","1"));
 	private  Archivador archivadorDecorado;
@@ -43,7 +42,15 @@ public class LogPBT {
 		// shutdown measurement framework
 		JetmUtil.tearDown();
 	}
-
+	/**
+	 * Test PBT para comporbar el funcionamiento de la funcion almacenarCorreoTest.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: generados aleatoriamente.
+	 */
 	@Property public void almacenarCorreoTest_EspacioSuficiente(@From(IntegerGenerator.class) @InRange(min = "1") int espacioArchivador) {
 		
 		archivadorDecorado = new ArchivadorSimple(NOMBRE_ARCHIVADOR, espacioArchivador);

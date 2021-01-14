@@ -47,7 +47,16 @@ public class LogTest {
 		
 		log = new Log(archivadorDelegado);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion almacenarCorreoTest.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void almacenarCorreoTest_EspacioInsuficiente() {
 		
@@ -55,7 +64,16 @@ public class LogTest {
 		
 		assertFalse(salida);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerDelegado.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerDelegadoTest() {
 		
@@ -63,7 +81,16 @@ public class LogTest {
 		
 		assertEquals(archivadorDecorado, decorado);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion establecerDelegado.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void establecerDelegadoTest() {
 		
