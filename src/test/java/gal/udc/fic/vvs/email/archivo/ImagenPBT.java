@@ -35,6 +35,15 @@ public class ImagenPBT {
 		JetmUtil.tearDown();
 	}
 
+	/**
+	 * Test PBT para comporbar el funcionamiento de la funcion obtenerContenidoTest.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: generados aleatoriamente.
+	 */
 	@Property public void obtenerContenidoTest(@From(StringGenerator.class) String contenido) {
 		imagen = new Imagen(NOMBRE_ARCHIVO, contenido);
 		

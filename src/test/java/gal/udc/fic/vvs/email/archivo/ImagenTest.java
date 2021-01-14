@@ -39,24 +39,60 @@ public class ImagenTest {
 		imagen = new Imagen(NOMBRE_ARCHIVO, CONTENIDO_ARCHIVO);
 	}
 
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerNombre.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerNombreTest() {
 
 		assertEquals(NOMBRE_ARCHIVO, imagen.obtenerNombre());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerTamaño.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerTamañoTest() {
 
 		assertEquals(TAMAÑO_ARCHIVO, imagen.obtenerTamaño());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerMimeType.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerMimeTypeTest() {
 
 		assertEquals(MIME_TYPE, imagen.obtenerMimeType());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerPreVisualizacion.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerPreVisualizacionTest() {
 

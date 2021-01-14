@@ -35,6 +35,15 @@ public class TextoPBT {
 		JetmUtil.tearDown();
 	}
 
+	/**
+	 * Test PBT para comporbar el funcionamiento de la funcion obtenerTamaño.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: generados aleatoriamente.
+	 */
 	@Property public void obtenerTamañoTest(@From(StringGenerator.class) String contenido) {
 		texto = new Texto(NOMBRE_ARCHIVO, contenido);
 		

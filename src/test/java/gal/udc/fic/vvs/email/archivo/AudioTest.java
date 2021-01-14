@@ -38,25 +38,61 @@ public class AudioTest {
 	public void init() {
 		audio = new Audio(NOMBRE_ARCHIVO, CONTENIDO_ARCHIVO);
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerContenido.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerContenidoTest() {
 
 		assertEquals(CONTENIDO_ARCHIVO, audio.obtenerContenido());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerTamaño.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerTamañoTest() {
 
 		assertEquals(TAMAÑO_ARCHIVO, audio.obtenerTamaño());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerMimeType.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerMimeTypeTest() {
 
 		assertEquals(MIME_TYPE, audio.obtenerMimeType());
 	}
-	
+
+	/**
+	 * Test para comporbar el funcionamiento de la funcion obtenerPreVisualizacion.
+	 * <p>
+	 * --> Nivel: Prueba de Unidad.
+	 * <p>
+	 * --> Categoría: prueba funcional dinámica de caja negra positiva.
+	 * <p>
+	 * --> Selección de datos: datos estaticos, pensados de antemano y especificos para la prueba.
+	 */
 	@Test
 	public void obtenerPreVisualizacionTest() {
 
