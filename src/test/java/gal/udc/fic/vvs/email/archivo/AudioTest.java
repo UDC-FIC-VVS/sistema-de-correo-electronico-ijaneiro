@@ -2,8 +2,12 @@ package gal.udc.fic.vvs.email.archivo;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
+
+import gal.udc.fic.vvs.email.util.JetmUtil;
 
 public class AudioTest {
 	
@@ -14,6 +18,21 @@ public class AudioTest {
 	private static final String PREVISUALIZACION_ARCHIVO = NOMBRE_ARCHIVO + "(" + TAMAÑO_ARCHIVO + " bytes, " + MIME_TYPE + ")";
 	
 	private Archivo audio;
+	
+	@BeforeClass
+	public static void lanzarJetm() {
+		System.out.println("<--------------------------------------------------------------->");
+		System.out.println("<----------------------- JETM AUDIO TEST ----------------------->");
+		System.out.println("<--------------------------------------------------------------->");
+		// configure measurement framework
+        JetmUtil.setup();
+	}
+	
+	@AfterClass
+	public static void cerrarJetm(){		
+		// shutdown measurement framework
+		JetmUtil.tearDown();
+	}
 	
 	@Before
 	public void init() {
